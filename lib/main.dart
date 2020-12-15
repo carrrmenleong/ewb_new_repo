@@ -28,7 +28,7 @@ final String upload = "upload";
 final String stagging = "stagging";
 final String compile = "compile";
 final String savedID = "savedID";
-final double distance_threshold = 10.0;
+final double distance_threshold = 0.0;
 final String databaseurl = "http://digism.xyz:8081/apiv1";
 
 /// This "Headless Task" is run when app is terminated.
@@ -171,7 +171,7 @@ class _MainStructureState extends State<MainStructure> {
     BackgroundFetch.configure(BackgroundFetchConfig(
         minimumFetchInterval: 15,
         stopOnTerminate: false,
-        enableHeadless: false,
+        enableHeadless: true,
         requiresBatteryNotLow: false,
         requiresCharging: false,
         requiresStorageNotLow: false,
