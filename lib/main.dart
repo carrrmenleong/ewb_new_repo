@@ -103,14 +103,14 @@ class _MainStructureState extends State<MainStructure> {
     });
   }
 
-  Future<void> batteryLevel() async {
-    getBattery().then((value) {
-      setState(() {
-        batLevel = value;
-      });
-      write_file([value], 'battery', filename, compile, vehicleID);
-    });
-  }
+  // Future<void> batteryLevel() async {
+  //   getBattery().then((value) {
+  //     setState(() {
+  //       batLevel = value;
+  //     });
+  //     write_file([value], 'battery', filename, compile, vehicleID);
+  //   });
+  // }
 
   Future<void> thread2() async {
     if (!await check_folder_empty(compile)) {
